@@ -87,40 +87,47 @@ function QUACK() {
 
 <br><br><br>
 <h1>Create Food for Your Duck!</h1>
- <section class="food-maker">
-      <form id="food form">
-        <label for="food-name">Give your food a name!</label>
-        <input type="text" id="food-name" name="food-name">
-      </form>
+<section class="food-maker">
+  <form id="food-form">
+    <label for="food-name">Give your food a name!</label>
+    <input type="text" id="food-name" name="food-name">
+  <br><br>
+    <label for="food-color">Give your food a color!</label>
+    <input type="text" id="food-color" name="food-color">
+  <br><br>
+    <label for="food-brand">Give your food a brand!</label>
+    <input type="text" id="food-brand" name="food-brand">
+  <br><br>
+    <label for="food-crunchiness">Food Crunchiness:</label>
+    <input type="range" id="food-crunchiness" name="food-crunchiness" min="1" max="5" step="0.5">
 
-      <form id="food form">
-        <label for="food-color">Give your food a color!</label>
-        <input type="text" id="food-color" name="food-color">
-<br><br>
-        <form id="food form">
-        <label for="food-brand">Give your food a brand!</label>
-        <input type="text" id="food-brand" name="food-brand">
-        <br><br>
-        <form id="food form">
-        <label for="food-crunchiness">Food Crunchiness:</label>
-        <input type="range" id="food-crunchiness" name="food-crunchiness" min="1" max="10">
-      </form>
-      </form>
-      </form>
-    </section>
+    <br><br>
+    <button id="create-food" type="button">Create Food!</button>
+  </form>
+</section>
 
-<button onclick="food()">Create Food!</button>
+<script>
+  function food() {
+    const XD = document.getElementById("food-crunchiness");
+    const crunchiness = XD ? parseFloat(XD.value) : 0;
 
-    <script>
-function food() {
-if (document.getElementById("food-crunchiness").value === "very crunchy") {
-  alert("Yum!")
-}
-}
+    // use ranges to handle 0.5 steps
+    if (crunchiness >= 4.5) {
+      alert("QUACK!!! >w<");
+    } else if (crunchiness >= 3.5) {
+      alert("Quack!! :3");
+    } else if (crunchiness >= 2.5) {
+      alert("Quack! :D");
+    } else if (crunchiness >= 1.5) {
+      alert("Quack. :>");
+    } else {
+      alert("Quack. :|");
+    }
+  }
+
+  document.getElementById("create-food").addEventListener("click", food);
 </script>
-
-
-
+  
 <h1>Create a Toy!</h1>
  <section class="toy-maker">
       <form id="toy form">
@@ -140,16 +147,25 @@ if (document.getElementById("food-crunchiness").value === "very crunchy") {
       </form>
       </form>
     </section>
-
   <button onclick="toy()">Create a Toy!</button>
-
     <script>
       function toy(){
         alert("Congrats! Your duck's ready to play!!!")
       }
     </script>
 
-
-
+<h1>Create Your Duck's Personality!</h1>
+     <section class="personality-maker">
+      <form id="personality form">
+        <label for="personality-texture">Give your duck some personality traits!</label>
+        <input type="text" id="personality-texture" name="personality-texture">
+      </form>
+    </section>
+  <button onclick="personality()">Boom...!</button>
+    <script>
+      function personality(){
+        alert("Boom! Your duck has a unique personality!")
+      }
+    </script>
     </div>
 </body>
