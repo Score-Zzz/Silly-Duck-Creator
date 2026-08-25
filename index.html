@@ -1,0 +1,155 @@
+<body>
+  <title>Silly Duck Creator!</title>
+  <h1>\\Create YOUR Duck!//</h1>
+  <div id="Introduction">
+    <h2>About Ducks:</h2>
+    <p>Ducks are aquatic birds of the family Anatidae characterized by broad, flat bills and specialized webbed feet for swimming. These water birds are smaller, and they have shorter necks in comparison to their relatives (geese and swans). Because of their similar forms, ducks are also confused with unrelated birds like loons, gallinules, coots, and grebes.</p>
+<a href="https://en.wikipedia.org/wiki/Duck">Click to know more about ducks!//Wikipedia</a>
+    <h1>Create a Duck!</h1>
+    <section class="duck-maker">
+      <form id="duck form">
+        <label for="duck-name">Give your duckie a name!</label>
+        <input type="text" id="duck-name" name="duck-name">
+      </form>
+
+      <form id="duck form">
+        <label for="duck-color">Give your duckie a color!</label>
+        <input type="text" id="duck-color" name="duck-color">
+<br><br>
+        <form id="duck form">
+        <label for="duck-age">Give your duckie an age!</label>
+        <input type="text" id="duck-age" name="duck-age">
+        <br><br>
+        <form id="duck form">
+        <label for="duck-gender">Give your duckie a gender!</label>
+        <input type="text" id="duck-gender" name="duck-gender">
+      </form>
+      </form>
+      </form>
+    </section>
+    
+    <button onclick="duckie()">Quack!</button>
+
+<script>
+function duckie() {
+alert("Congrats! Your duck is ready!");
+}
+</script>
+
+  <button onclick="QUACK()">Check Duck!</button>
+  
+<script>
+
+function QUACK() {
+  const duck = document.getElementById("duck-gender").value;
+  if (duck === "non-binary") {
+    alert("They look amazing! Let's give them a pond next!")
+  } else if(duck === "male") {
+    alert("He looks amazing! Let's give him a pond next!")
+  } else if (duck === "female") {
+    alert("She looks amazing! Let's give her a pond next!")
+  } else {
+    alert("Nice gender choice! Let's give them a pond next!")
+  }
+}
+</script>
+<br><br><br><br>
+
+<h1>Create a Pond!</h1>
+ <section class="pond-maker">
+      <form id="pond form">
+        <label for="pond-color">Give your pond a water color!</label>
+        <input type="text" id="pond-color" name="pond-color">
+      </form>
+
+      <form id="pond form">
+        <label for="pond-location">Give your pond a location!</label>
+        <input type="text" id="pond-location" name="pond-location">
+<br><br>
+        <form id="pond form">
+        <label for="pond-width">Give your pond a width!</label>
+        <input type="text" id="pond-width" name="pond-width">
+        <br><br>
+        <form id="pond form">
+        <label for="pond-height">Give your pond a height!</label>
+        <input type="text" id="pond-height" name="pond-height">
+      </form>
+      </form>
+      </form>
+    </section>
+
+<button onclick="pond()">Create a Pond!</button>
+<script>
+  function pond() {
+    alert("Congrats! Your pond is ready for your duckie!")
+  }
+</script>
+
+<br><br><br>
+<h1>Create Food for Your Duck!</h1>
+ <section class="food-maker">
+      <form id="food form">
+        <label for="food-name">Give your food a name!</label>
+        <input type="text" id="food-name" name="food-name">
+      </form>
+
+      <form id="food form">
+        <label for="food-color">Give your food a color!</label>
+        <input type="text" id="food-color" name="food-color">
+<br><br>
+        <form id="food form">
+        <label for="food-brand">Give your food a brand!</label>
+        <input type="text" id="food-brand" name="food-brand">
+        <br><br>
+        <form id="food form">
+        <label for="food-crunchiness">Food Crunchiness:</label>
+        <input type="range" id="food-crunchiness" name="food-crunchiness" min="1" max="10">
+      </form>
+      </form>
+      </form>
+    </section>
+
+<button onclick="food()">Create Food!</button>
+
+    <script>
+function food() {
+if (document.getElementById("food-crunchiness").value === "very crunchy") {
+  alert("Yum!")
+}
+}
+</script>
+
+
+
+<h1>Create a Toy!</h1>
+ <section class="toy-maker">
+      <form id="toy form">
+        <label for="toy-texture">Give your toy a texture!</label>
+        <input type="text" id="toy-texture" name="toy-texture">
+      </form>
+
+      <form id="toy form">
+        <label for="toy-color">Give your toy a color!</label>
+        <input type="text" id="toy-color" name="toy-color">
+<br><br>
+        <form id="toy form">
+        <label for="toy-purpose">Give your toy a purpose!</label>
+        <input type="text" id="toy-purpose" name="toy-purpose">
+        <br><br>
+      </form>
+      </form>
+      </form>
+    </section>
+
+  <button onclick="toy()">Create a Toy!</button>
+
+    <script>
+      function toy(){
+        alert("Congrats! Your duck's ready to play!!!")
+      }
+    </script>
+
+
+
+    </div>
+</body>
